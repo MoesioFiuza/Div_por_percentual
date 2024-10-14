@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-planilha_matriz = r'C:\Users\moesios\Desktop\HORA\1- EDU_COL_unificada.xlsx'
-diretorio_saida = r'T:\ANDAMENTO\2313-RS-POA-SMA-COLDA\03-PRODUTOS\03.3-COLETA DADOS\03.3.2-FINAL\PRODUTO 14 - REV00\Matriz OD - VIAGENS\OD VIAGENS - HORA A HORA\EDUIND'
+planilha_matriz = r'planilha entrada'
+diretorio_saida = r'planilha saída'
 
 if not os.path.exists(diretorio_saida):
     os.makedirs(diretorio_saida)
@@ -27,4 +27,3 @@ for i, percentual in enumerate(percentuais):
     arquivo_saida = os.path.join(diretorio_saida, f'EDUCOL_HORA_{i}.xlsx')
     df_modificado.to_excel(arquivo_saida, index=False)
 
-print(f"Soma total dos valores das 24 planilhas modificadas: {soma_total}")
